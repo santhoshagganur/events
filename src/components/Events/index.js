@@ -55,7 +55,16 @@ const eventsList = [
 // Write your code here
 
 class Events extends Component {
+  state = {activeEventId: ''}
+
+  setActiveEvent = id => {
+    this.setState({activeEventId: id})
+  }
+
   render() {
+    const {activeEventId} = this.state
+    console.log(activeEventId)
+
     return (
       <div className="bg-container">
         <div className="events-details">
@@ -63,7 +72,11 @@ class Events extends Component {
             <h1 className="heading"> Events </h1>
             <ul className="events-list">
               {eventsList.map(each => (
-                <EventItem eventDetails={each} key={each.id} />
+                <EventItem
+                  eventDetails={each}
+                  key={each.id}
+                  setActiveEvent={this.setActiveEvent}
+                />
               ))}
             </ul>
           </div>

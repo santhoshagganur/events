@@ -21,3 +21,7 @@
   color: #ffffff;
   font-size: 15px;
 }
+
+.user-interaction-button {
+  border-width: 0;
+}
