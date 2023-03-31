@@ -19,7 +19,7 @@ const EventItem = props => {
         <img src={imageUrl} alt="event" className="event-image" />
       </button>
 
-      <h1 className="event-name"> {name} </h1>
+      <p className="event-name"> {name} </p>
       <p className="event-place"> {location} </p>
     </li>
   )

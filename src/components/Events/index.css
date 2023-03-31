@@ -25,3 +25,10 @@
   font-size: 30px;
   font-weight: bold;
 }
+
+@media screen and (max-width: 767px) {
+  .events-container {
+    width: 50vw;
+    padding: 10px;
+  }
+}

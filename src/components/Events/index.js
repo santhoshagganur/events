@@ -61,6 +61,19 @@ class Events extends Component {
     this.setState({activeEventId: id})
   }
 
+  getActiveRegistrationStatus = () => {
+    const {activeEventId} = this.state
+
+    const activeEventDetails = eventsList.find(
+      each => each.id === activeEventId,
+    )
+
+    if (activeEventDetails) {
+      return activeEventDetails.registrationStatus
+    }
+    return ''
+  }
+
   render() {
     const {activeEventId} = this.state
     console.log(activeEventId)
@@ -80,7 +93,9 @@ class Events extends Component {
               ))}
             </ul>
           </div>
-          <ActiveEventRegistrationDetails />
+          <ActiveEventRegistrationDetails
+            activeEventRegistrationStatus={this.getActiveRegistrationStatus()}
+          />
         </div>
       </div>
     )

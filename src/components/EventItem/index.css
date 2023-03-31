@@ -24,4 +24,14 @@
 
 .user-interaction-button {
   border-width: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 767px) {
+  .event-image {
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+  }
 }
